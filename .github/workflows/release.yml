@@ -1,0 +1,29 @@
+# Packages Sentinel Grudge on version tags and publishes a GitHub release.
+# CurseForge upload runs only when both a project id and CF_API_KEY are set.
+# With no ## X-Curse-Project-ID in the toc, or with CF_API_KEY unset, the
+# packager skips the CurseForge upload and the job still succeeds.
+
+name: Package and release
+
+on:
+  push:
+    tags:
+      - "v*"
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    env:
+      CF_API_KEY: ${{ secrets.CF_API_KEY }}
+      GITHUB_OAUTH: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+      - name: Clone project
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Package and release
+        uses: BigWigsMods/packager@v2

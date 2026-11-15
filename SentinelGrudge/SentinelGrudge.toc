@@ -1,0 +1,10 @@
+## Interface: 16001
+## Title: Sentinel Grudge
+## Notes: Attackers, sightings and KOS/Friendly tags built on Forever Sentinel PVP data. /grudge
+## Author: Encrypt512bit
+## Version: 1.2.0
+## Dependencies: ForeverPvPIntel
+## SavedVariables: SentinelGrudgeDB
+Core.lua
+UI.lua
+Minimap.lua

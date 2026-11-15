@@ -1,0 +1,18 @@
+package-as: SentinelGrudge
+
+move-folders:
+  SentinelGrudge/SentinelGrudge: SentinelGrudge
+
+ignore:
+  - README.md
+  - test
+  - LICENSE
+  - .github
+  - .gitignore
+
+# Runtime dependency: ForeverPvPIntel (Sentinel PvP).
+# Players install that addon separately. It is not fetched as an external
+# and is not bundled in this package. The toc already declares
+# ## Dependencies: ForeverPvPIntel.
+required-dependencies:
+  - ForeverPvPIntel

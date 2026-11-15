@@ -1,0 +1,17 @@
+# OS junk
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+desktop.ini
+*~
+*.swp
+*.swo
+
+# Packager output and release archives
+*.zip
+.release/
